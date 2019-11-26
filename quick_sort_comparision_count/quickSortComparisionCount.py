@@ -1,3 +1,5 @@
+#! /usr/bin/python
+
 def partition(int_list,l,r,p):
     #print(l,r,int_list)
     #FIND PIVOT AND SWAP WITH FIRST ELEMENT (L)
@@ -65,7 +67,7 @@ def quickSort(int_list,l,r):
 
 with open('QuickSort.txt') as f:
     int_list=[int(x) for x in f]
-    count=quickSort(int_list,0,len(int_list)-1)
-    # p=median(int_list,0,len(int_list)-1)
-    # print(p)
-    print(count)
+count=quickSort(int_list,0,len(int_list)-1)
+# p=median(int_list,0,len(int_list)-1)
+# print(p)
+print(count)

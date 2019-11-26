@@ -1,3 +1,5 @@
+#! /usr/bin/python
+
 def merge_count(list1,list2,length1,length2):
   int_list=[]
   count=0
