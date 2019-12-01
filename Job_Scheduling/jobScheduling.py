@@ -1,8 +1,8 @@
 #! /usr/bin/python
 
 def keyFunc(weight, length):
-    #return weight-length
-    return weight/length
+    return weight-length
+    #return weight/length
 
 class job:
     def __init__(self, weight, length):
@@ -31,11 +31,10 @@ def scheduler(jobs):
     return weighted_completion_time
 
 
-#fileName='input_random_7_20.txt'
+#fileName='input_random_33_2560.txt'
 fileName='jobs.txt'
 
 with open(fileName) as f:
-    #jobs=[job(int(x.split()[0]),int(x.split()[1])) for x in f]
     n_jobs=f.readline()
     jobs=[job(int(x.split()[0]),int(x.split()[1])) for x in f]
 
@@ -43,12 +42,3 @@ with open(fileName) as f:
 
 weighted_completion_time=scheduler(jobs)
 print(weighted_completion_time)
-
-# jobs.sort()
-# jobs.reverse()
-# print('After Sort:')
-# for j in jobs:
-#     print(j.key, j.weight, j.length)
-
-# test=job(3,2)
-# print(test.key)
